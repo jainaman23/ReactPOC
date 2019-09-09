@@ -1,0 +1,257 @@
+@import '../init/variables';
+
+.user-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 58px);
+  max-width: $xs;
+  margin: auto;
+  position: relative;
+  z-index: 3;
+  flex-direction: column;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    padding: 0 15px;
+
+    input {
+      color: #000;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 5px;
+      margin-bottom: 10px;
+
+      &::-webkit-input-placeholder {
+        color: rgba(0,0,0,0.3);
+      }
+
+      &:-ms-input-placeholder {
+        color: rgba(0,0,0,0.3);
+      }
+
+      &::placeholder {
+        color: rgba(0,0,0,0.3);
+      }
+    }
+
+    .more-link {
+      margin-top: 0;
+
+      .btn {
+        width: 100%;
+        background: #000;
+        color: #fff;
+        font-weight: 700;
+
+        &.active {
+          border-color: #000;
+          color: #fff;
+          box-shadow: none;
+          background: #000;
+        }
+      }
+    }
+  }
+
+  .extended {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    color: #000;
+    font-size: 14px;
+
+    @media all and (max-width: $xs) {
+      font-size: 12px;
+    }
+
+    input {
+      margin-bottom: 0;
+      cursor: pointer;
+    }
+  }
+
+  .forget-password {
+    text-decoration: none;
+    color: #000;
+    background: transparent;
+    border: 0;
+    font-size: inherit;
+    font-family: inherit;
+    box-shadow: none;
+    font-weight: inherit;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .login-status {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .msg {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.top-header {
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.user-login-wrapper {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255,255,255,0.5);
+    z-index: 2;
+  }
+}
+
+.side-navigation, .main-nav {
+  display: none;
+}
+
+.need-help {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 30px;
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
+#toolbar-administration {
+  display: none;
+}
+
+body {
+  padding-top: 0 !important;
+}
+
+.registration-form {
+  background-color: rgba(255,255,255,0.8);
+  max-width: none;
+
+  .page-title {
+    width: 100%;
+    text-align: left;
+  }
+
+  .registration-wrapper {
+    overflow: auto;
+    margin-bottom: 50px;
+    height: calc(100vh - 120px);
+    width: 100%;
+  }
+
+  form {
+    max-width: $sm;
+    margin: auto;
+
+    input {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+
+  .dropdown {
+    width: 100%;
+
+    .btn {
+      width: 100%;
+      border-color: #000;
+      text-align: left;
+      text-transform: capitalize;
+      font-weight: 700;
+    }
+
+    .dropdown-item {
+      text-align: left;
+      text-transform: capitalize;
+      font-weight: 700;
+    }
+
+    .dropdown-header {
+      text-align: left;
+      padding: 8px 5px;
+      margin: 0;
+    }
+  }
+
+  .loader {
+    padding: 6px 0;
+    border: 1px solid #000;
+    margin-bottom: 15px;
+
+    .inline-loading {
+      line-height: 16px;
+      font-size: 16px;
+    }
+  }
+
+  .need-help {
+    margin: 50px 0;
+
+    .loader {
+      border: none;
+    }
+  }
+
+  .select-filter {
+    padding: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+
+    .btn {
+      padding: 7px;
+
+      &:after {
+        height: 32px;
+      }
+    }
+  }
+
+  .captcha {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+  }
+}

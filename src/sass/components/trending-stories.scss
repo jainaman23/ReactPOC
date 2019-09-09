@@ -1,0 +1,32 @@
+@import '../init/variables';
+
+//Story Details
+.story-details {
+  width: 100%;
+
+  .story-content {
+    margin: 0 -15px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  picture {
+    margin-bottom: 20px;
+  }
+
+  .page-title {
+    font-size: 25px;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .story-body {
+    padding: 0 15px;
+
+    iframe {
+      width: 100% !important;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+global-styles:
+  version: 1.x
+  css:
+    theme:
+      common_bundle_css: {}
+      main_bundle_css: {}
+
+custom-script:
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+
+react-scripts:
+  js:
+    common_bundle_js: {attributes: {type: application/javascript}, preprocess: true}
+    main_bundle_js: {attributes: {type: application/javascript}, preprocess: true}
